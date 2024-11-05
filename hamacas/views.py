@@ -31,9 +31,9 @@ def usuarios_cuenta_nombre (request, nombre):
 
 #Exclude descartara todos los usuarios que no esten en la tabla banco
 def usuarios_votos__puntuacion_banco(request):
-    usuarios = Valoracion.objects.prefetch_related('usuario').filter(
-        fecha_valoracion__year__gte=2023, valor=5).exclude(usuario__banco=None)
-    return render (request, 'usuarios.html',{'usuarios_mostrar' : usuarios})
+    usuarios = Usuario.objects.filter(
+        valoracion__fecha_valoracion__year__gte=2023, valoracion__valor=5).exclude(banco=None)
+    return render (request, 'usuarios_valoraciones.html',{'usuarios_mostrar' : usuarios})
 
 #Errores
 def mi_error_400(request, exception=None):

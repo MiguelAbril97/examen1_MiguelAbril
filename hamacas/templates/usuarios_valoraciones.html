@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes con valoraciones</title>
+</head>
+<body>
+    
+    {%for usuario in usuarios_mostrar%}
+    <h2>Nombre del usuario: {{usuario.nombre}}</h2>
+    <h2>Comentarios del usuario</h2>
+    <ul>
+        {%for valoracion in usuario.voto.all%}
+        <li>{{valoracion.valor}}</li>
+        {%endfor%}
+    </ul>
+    <br>
+    {% endfor %}
+    
+</body>
+</html>

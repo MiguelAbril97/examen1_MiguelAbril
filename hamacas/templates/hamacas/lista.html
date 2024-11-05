@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista hamacas</title>
+</head>
+<body>
+    <h2>Usuario: {{usuario.nombre}}</h2>
+    {%for hamaca in hamacas_mostrar%}
+    <h2>Producto: {{hamaca.nombre}}</h2>
+    <h2>Material: {{hamaca.material}}</h2>
+    <h2>Longitud: {{hamaca.longitud}}</h2>
+    <h2>Peso maximo: {{hamaca.peso_maximo}}</h2>
+    {%endfor%}
+</body>
+</html>

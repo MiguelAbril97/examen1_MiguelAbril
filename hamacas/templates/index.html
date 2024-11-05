@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <body>
+            <h1>Enlaces</h1>
+            <ul>
+                <li><a href="{% url 'ultima_valoracion_hamaca' 13%}">Ver ultima valoracion de una hamaca</a></li>
+                <li><a href="{% url 'puntuacion_usuario' 8%}">Valoraciones del usuario 8</a></li>
+                <li><a href="{% url 'usuarios_no_valoracion'%}">Usuarios sin valoraciones</a></li>
+                <li><a href="{% url 'usuarios_cuenta_nombre' 'Superman'%}">Usuarios de Unicaja o Caixa y con Superman en nombre</a></li>
+                <li><a href="{% url 'usuarios_votos__puntuacion_banco'%}">Usuarios que valoraron a partir de 2023 y tienen cuenta bancaria</a></li>
+            </ul>
+        </body>
+</html>

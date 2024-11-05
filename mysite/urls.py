@@ -19,13 +19,13 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   ## path("", include("app.urls")),
+    path("", include("hamacas.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
 
-# from django.conf.urls import handler400, handler403, handler404, handler500
+from django.conf.urls import handler400, handler403, handler404, handler500
 
-#handler400 = 'tienda.views.mi_error_400'
-#handler403 = 'tienda.views.mi_error_403'
-#handler404 = 'tienda.views.mi_error_404'
-#handler500 = 'tienda.views.mi_error_500'
+handler400 = 'hamacas.views.mi_error_400'
+handler403 = 'hamacas.views.mi_error_403'
+handler404 = 'hamacas.views.mi_error_404'
+handler500 = 'hamacas.views.mi_error_500'
